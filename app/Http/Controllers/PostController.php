@@ -15,6 +15,7 @@ class PostController extends Controller
     public function index()
     {        
         return view('blog', [
+            'nav' => 'Blog',
             'title' => 'All Posts',
             'posts' => Post::with(['category', 'user'])->latest()->paginate(5)
         ]);

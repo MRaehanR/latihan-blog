@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory;
 
     protected $fillable = [
@@ -15,6 +16,7 @@ class Post extends Model
         'body',
         'slug',
         'author',
+        'category_id',        
     ];
 
     public function category()

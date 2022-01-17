@@ -27,7 +27,7 @@ Route::get('/', function () {
     ];
 
     return view('home', [
-        'title' => 'Home',
+        'nav' => 'Home',
         'blog' => $blogs,
     ]);
 });
@@ -35,7 +35,7 @@ Route::get('/', function () {
 Route::get('/about', function () {
 
     return view('about', [
-        'title' => 'About',
+        'nav' => 'About',
     ]);
 });
 
